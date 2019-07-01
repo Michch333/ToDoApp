@@ -1,0 +1,70 @@
+.whole-body {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 70%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input {
+    border: 1px solid lightgrey;
+    padding: 5px;
+    color: grey;
+    height: 30px;
+}
+.titlePage {
+    text-align: left;
+    margin: 0;
+}
+
+.subtitle {
+    margin: 0;
+    text-align: left;
+}
+
+.task-complete {
+    text-decoration: line-through;
+}
+
+header {
+    font-size: 40px;
+}
+
+.deleteBtn {
+    height: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    float: right;
+    background-color: white;
+    border: none;
+}
+
+.completeBtn {
+    border: 1px solid red;
+    border-radius: 8px;
+    padding: 3px;
+    color: red;
+    background-color: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+#addBtn {
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
