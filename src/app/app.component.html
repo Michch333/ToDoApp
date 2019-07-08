@@ -7,15 +7,16 @@
   <p class="subtitle">
     A place to store all the things you need to do!
   </p>
-  <input type="text" value="Filter Your Todos!">
-  <h3 *ngFor="let todo of todoObjects; index as i" [ngClass]="{'task-complete': todo.completed}">
+  <input type="text" placeholder="Filter Your Todos!" (keyup)="filterItems($event)">
+  <h3 *ngFor="let todo of filteredTodoObjects; index as i" [ngClass]="{'task-complete': todo.completed}">
     {{i+1}}.
-    <button *ngIf="!todo.completed" class="completeBtn">Complete</button>
+    <button (click) = "completedTask(i)" *ngIf="!todo.completed" class="completeBtn">Complete</button>
     {{todo.task}}
-    <button class="deleteBtn" type="button"> X </button>
+    <button class="deleteBtn" type="button" (click) = "removeTask(i)"> X </button>
   </h3>
 
-  <input type="text" value="Add to your to-do list!">
-  <button type="button" id="addBtn">Add</button>
+  <input type="text" #newItem placeholder="Add to your to-do list!">
+  <button type="button" (click) = "addItem(newItem.value)" id="addBtn">Add</button>
+
 </div>
 
